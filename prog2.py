@@ -3,7 +3,7 @@ import json
 from pydaos import DCont, DDict
 
 # Create a DAOS container
-daos_cont = DCont("pydaos_kvstore", "kvstore", None)
+daos_cont = DCont("test_pool", "kvstore", None)
 
 # Create a DAOS dictionary or get it if it already exists
 try:
@@ -23,33 +23,34 @@ def print_help():
     print("u\t- Upload file for a new key")
     print("ub\t- Upload files for new keys in bulk")
     print("d\t- Delete key")
+    print("p\t- Display keys")
     print("q\t- Quit")
+
 
 # Function to read a key
 def read_key():
-    key = input("Enter key to read: ")
-    value = daos_dict.get(key)
-    if value:
-        save_value_as_file(key, value)
-    else:
-        print("Key not found.")
+    try:
+    	key = input("Enter key to read: ")
+    	value = daos_dict[key]
+    	if value:
+        	save_value_as_file(key, value)
+    	else:
+        	print("Key not found.")
+
+    except KeyError:
+        print("\tError! Key not found")
 
 # Function to save value as a file
 def save_value_as_file(key, value):
     filename = os.path.join(upload_dir, f"{key}.dat")
     with open(filename, "wb") as f:
-        f.write(value.encode())
+        f.write(value)
     print(f"Value saved as file: {filename}")
 
-# Function to read all keys
-def read_all_keys():
-    keys = daos_dict.keys()
-    if keys:
-        print("Keys in dictionary:")
-        for key in keys:
-            print(key)
-    else:
-        print("Dictionary is empty.")
+#Function to print all keys
+def print_keys():
+    for i in daos_dict:
+        print(i)
 
 # Function to upload file for a new key
 def upload_file():
@@ -95,14 +96,14 @@ while True:
         print_help()
     elif cmd == "r":
         read_key()
-    elif cmd == "ra":
-        read_all_keys()
     elif cmd == "u":
         upload_file()
     elif cmd == "d":
         delete_key()
     elif cmd == "ub":
         upload_bulk()
+    elif cmd=='p':
+        print_keys()
     elif cmd == "q":
         break
     else:
