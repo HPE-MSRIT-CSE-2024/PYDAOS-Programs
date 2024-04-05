@@ -1,7 +1,7 @@
 from pydaos import DCont, DDict, DObjNotFound
 import json
 
-daos_cont = DCont("pydaos", "kvstore", None)
+daos_cont = DCont("test_pool", "kvstore", None)
 daos_dict = None
 
 try:
