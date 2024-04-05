@@ -3,7 +3,7 @@ import json
 from pydaos import DCont, DDict
 
 # Create a DAOS container
-daos_cont = DCont("test_pool", "kvstore", None)
+daos_cont = DCont("pydaos", "kvstore", None)
 
 # Create a DAOS dictionary or get it if it already exists
 try:
