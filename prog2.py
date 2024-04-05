@@ -19,7 +19,6 @@ os.makedirs(upload_dir, exist_ok=True)
 def print_help():
     print("?\t- Print this help")
     print("r\t- Read a key")
-    print("ra\t- Read all keys")
     print("u\t- Upload file for a new key")
     print("ub\t- Upload files for new keys in bulk")
     print("d\t- Delete key")
