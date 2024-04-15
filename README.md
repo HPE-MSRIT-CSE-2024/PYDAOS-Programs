@@ -12,6 +12,9 @@ Output:
 ### chunks.py:
 - This program uploads a file in chunks of sizes specified by the user and provides the time taken to upload the file in that many number of chunks. 
 - It can be used to experiment with different chunk sizes to determine which one takes the least amount of time to upload, as well as to retrieve it from the directory in those many numbers of chunks.
+- output
+  ![chunk1](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/2c0a638a-d365-4c29-b406-364257fcd6b8)
+
 
 ### file_upload.py:
 - This program directly uploads a file and provides the time taken to upload. 
