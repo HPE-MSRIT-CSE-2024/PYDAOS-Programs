@@ -14,6 +14,9 @@ Output:
 - It can be used to experiment with different chunk sizes to determine which one takes the least amount of time to upload, as well as to retrieve it from the directory in those many numbers of chunks.
 - output
   ![chunk1](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/2c0a638a-d365-4c29-b406-364257fcd6b8)
+  ![chunk2](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/81d7925c-3c6b-41d0-8a37-157201d670f7)
+  
+
 
 
 ### file_upload.py:
