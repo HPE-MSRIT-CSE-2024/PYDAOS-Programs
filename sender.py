@@ -4,7 +4,7 @@ from pydaos import DCont
 
 # Define the class
 class MyClass:
-    def _init_(self, name):
+    def __init__(self, name):
         self.name = name
 
     def greet(self):
@@ -13,7 +13,7 @@ class MyClass:
 # Serialize the class definition
 class_definition = """
 class MyClass:
-    def _init_(self, name):
+    def __init__(self, name):
         self.name = name
 
     def greet(self):
