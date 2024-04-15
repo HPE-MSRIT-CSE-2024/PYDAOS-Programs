@@ -2,6 +2,11 @@
 
 ## Program Descriptions:
 
+### prog2.py
+Output:
+![image](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/13d70962-d687-47f1-9d10-828d55dbf3d3)
+
+
 ### chunks.py:
 - This program uploads a file in chunks of sizes specified by the user and provides the time taken to upload the file in that many number of chunks. 
 - It can be used to experiment with different chunk sizes to determine which one takes the least amount of time to upload, as well as to retrieve it from the directory in those many numbers of chunks.
