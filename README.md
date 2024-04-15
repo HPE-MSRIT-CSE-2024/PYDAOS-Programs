@@ -13,8 +13,15 @@ Output:
 - This program uploads a file in chunks of sizes specified by the user and provides the time taken to upload the file in that many number of chunks. 
 - It can be used to experiment with different chunk sizes to determine which one takes the least amount of time to upload, as well as to retrieve it from the directory in those many numbers of chunks.
 - output
+- uploading 200mb file as 10MB chunks
   ![chunk1](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/2c0a638a-d365-4c29-b406-364257fcd6b8)
+
+  uploading 200mb file as 25MB chunks
   ![chunk2](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/81d7925c-3c6b-41d0-8a37-157201d670f7)
+
+  uploading 200mb file as 50MB chunks
+  ![chunk3](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/8765ec27-409f-4586-8e1d-869df7a0eb3d)
+
   
 
 
