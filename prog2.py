@@ -112,5 +112,4 @@ while True:
     else:
         print("Invalid command. Enter '?' for help.")
 
-print("Program ended.")
-~                                                                             
+print("Program ended.")                                                            
