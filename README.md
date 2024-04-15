@@ -4,6 +4,8 @@
 
 ### prog2.py
 Output:
+
+
 ![image](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/13d70962-d687-47f1-9d10-828d55dbf3d3)
 
 
