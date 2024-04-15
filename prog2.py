@@ -29,12 +29,12 @@ def print_help():
 # Function to read a key
 def read_key():
     try:
-    	key = input("Enter key to read: ")
-    	value = daos_dict[key]
-    	if value:
-        	save_value_as_file(key, value)
-    	else:
-        	print("Key not found.")
+        key = input("Enter key to read: ")
+        value = daos_dict[key]
+        if value:
+                save_value_as_file(key, value)
+        else:
+                print("Key not found.")
 
     except KeyError:
         print("\tError! Key not found")
@@ -54,19 +54,22 @@ def print_keys():
 # Function to upload file for a new key
 def upload_file():
     key = input("Enter new key: ")
-    file_path = input("Enter path to file: ")
-    if os.path.exists(file_path):
-        with open(file_path, "rb") as f:
-            value = f.read()
-        daos_dict.put(key, value)
-        print("File uploaded successfully.")
+    if key not in daos_dict:
+         file_path = input("Enter path to file: ")
+         if os.path.exists(file_path):
+                 with open(file_path, "rb") as f:
+                         value = f.read()
+                 daos_dict.put(key, value)
+                 print("File uploaded successfully.")
+         else:
+                 print("File not found.")
     else:
-        print("File not found.")
+         print("Key already exists")
 
 # Function to delete a key
 def delete_key():
     key = input("Enter key to delete: ")
-    if daos_dict.pop(key):
+    if daos_dict.pop(key) is None:
         print("Key deleted successfully.")
     else:
         print("Key not found.")
@@ -86,11 +89,12 @@ def upload_bulk():
             print(f"File not found for key {key}.")
 
 # Main loop
+print_help()
+
 while True:
     print("\nCommands:")
-    print_help()
     cmd = input("Enter command (? for help): ")
-    
+
     if cmd == "?":
         print_help()
     elif cmd == "r":
@@ -109,3 +113,4 @@ while True:
         print("Invalid command. Enter '?' for help.")
 
 print("Program ended.")
+~                                                                             
