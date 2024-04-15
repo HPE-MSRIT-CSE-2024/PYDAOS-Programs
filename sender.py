@@ -1,6 +1,6 @@
 # sender.py
 
-from pydaos import DCont
+from pydaos import (DCont, DDict, DObjNotFound)
 
 # Define the class
 class MyClass:
