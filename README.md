@@ -13,6 +13,7 @@
 ### sender.py and receiver.py:
 - This program stores class definitions in the DAOS directory by serializing them and retrieves them so that an instance of the class, an object, can be created.
 
+- Output screenshot
 - 
   ![image](https://github.com/HPE-MSRIT-CSE-2024/PYDAOS-Programs/assets/164491690/5e8dae4f-4be0-4648-a596-2d64b5337699)
 
