@@ -77,7 +77,7 @@ def upload_file():
 # Function to delete a key
 def delete_key():
     key = input("Enter key to delete: ")
-    if daos_dict.pop(key):
+    if not daos_dict.pop(key):
         print("Key deleted successfully.")
     else:
         print("Key not found.")
@@ -97,24 +97,30 @@ def upload_bulk():
         keys.append(key)
         file_paths.append(file_path)
 
-    bulk_data={}
-    start_time=time.time()
-    # Upload files for each key
+    # Measure time for each file upload
+    total_upload_time = 0
+    
     for key, file_path in zip(keys, file_paths):
+
         if os.path.exists(file_path):
             with open(file_path, "rb") as f:
                 value = f.read()
 
-            bulk_data[key] = value
-       	     
+            start_time = time.time()
+
+            daos_dict.put(key, value)
+             
+            end_time = time.time()
+            upload_time = end_time - start_time
+            total_upload_time += upload_time
+
+            print(f"File uploaded for key {key}. Time taken: {upload_time} seconds")
         else:
             print(f"File not found for key {key}.")
 
-    end_time = time.time() 
-    daos_dict.bput(bulk_data)
-    upload_time = end_time - start_time
-    print(f"Time taken: {upload_time} seconds")
+    print(f"Total time taken for all uploads: {total_upload_time} seconds")
 
+    # Prompt user to enter ke
 # Main loop
 while True:
     print("\nCommands:")
