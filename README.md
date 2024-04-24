@@ -44,7 +44,7 @@ Output:
 
 ### test_pool.py
 - Returns pool with maximum number of targets and all the containers in that pool
-- Can be used as an api in other programs to automatically find and allocate pools and containers to the program
+- Can be imported in other programs to automatically find and allocate pools and containers to the program
 
 ### auto_chunks.py
 - chunks.py with slight modification
