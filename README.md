@@ -40,3 +40,14 @@ Output:
 
 ### sender_dict.py and receiver_dict.py:
 - This program stores dictionary objects in a serialized form in the DAOS directory and retrieves them, allowing their use in a different program.
+
+
+### test_pool.py
+- Returns pool with maximum number of targets and all the containers in that pool
+- Can be used as an api in other programs to automatically find and allocate pools and containers to the program
+
+### auto_chunks.py
+- chunks.py with slight modification
+- pool and container are not hardcoded, uses test_pool,py to find pool with maximum number of targets
+
+
