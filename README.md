@@ -56,3 +56,6 @@ Output:
 - Containers in a pool are selected based on round robin method
 - After every operation the metadata file is synchronized
 
+### compare_files.py
+- program to check whether the contents of original and retrieved file are same or not
+
