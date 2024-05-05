@@ -46,9 +46,13 @@ Output:
 
 ### test_pool.py
 - Returns pool with maximum number of targets and all the containers in that pool
-- Can be imported in other programs to automatically find and allocate pools and containers to the program
+- If 2 or more pools have same number of targets then pool with maximum amount of free space is returned
+- synchronizes file containing metadata of all the keys
+- Can be imported in other programs to automatically find and allocate pools and containers to the program and also to mantain a metadata file
 
 ### auto_chunks.py
 - chunks.py with slight modification
 - pool and container are not hardcoded, uses test_pool,py to find pool with maximum number of targets
+- Containers in a pool are selected based on round robin method
+- After every operation the metadata file is synchronized
 
