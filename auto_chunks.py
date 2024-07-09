@@ -46,9 +46,6 @@ os.makedirs(upload_dir, exist_ok=True)
 # Metadata file path
 metadata_file = "metadata.json"
 
-#Synchronize the metadata file
-pool_test.synchronize_metadata()
-
 # Function to print help
 def print_help():
     print("?\t- Print this help")
