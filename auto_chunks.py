@@ -126,7 +126,6 @@ def save_value_as_file(key, value):
 
 # Function to print all keys, pools, and containers in three columns
 def print_keys():
-    pool_test.synchronize_metadata()
     try:
         with open(metadata_file, "r") as f:
             metadata = json.load(f)
