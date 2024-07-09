@@ -27,8 +27,8 @@ def get_daos_container():
 
   last_used_index = pool_data["last_used_index"]
 
-  last_used_index = metadata.get(pool, {}).get("last_used_index", -1) % len(containers)
-  metadata[pool] = {"containers": containers.copy(), "last_used_index": (last_used_index + 1) % len(containers)}
+  last_used_index = (last_used_index+1) % len(containers)
+  metadata[pool] = {"containers": containers.copy(), "last_used_index": (last_used_index)}
 
 
   with open(POOL_METADATA_FILE, "w") as f:
